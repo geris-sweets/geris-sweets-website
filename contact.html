@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us · Geri's Sweets</title>
+  <meta name="description" content="Request custom decorated cookies from Geri's Sweets. Design your cookie, pick your date and get an instant estimate.">
+  <meta name="theme-color" content="#D8BA8B">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero" data-flowers="8">
+      <div class="wrap">
+        <span class="eyebrow">Let's talk cookies</span>
+        <h1 class="ribbon">Contact Us</h1>
+        <p>Tell us about your celebration and Geri will get back to you to talk through the details, design and your quote.</p>
+      </div>
+      <div class="scallop scallop-bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap order-layout">
+
+        <form class="order-form" id="order-form" novalidate>
+          <!-- 1. You -->
+          <div class="card">
+            <div class="form-step-head"><span class="n">1</span><h2>About you</h2></div>
+            <div class="row-2">
+              <div class="field"><label for="f-name">Your name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required><div class="err">Please tell us your name.</div></div>
+              <div class="field"><label for="f-phone">Phone <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><div class="err">We'll need a number to reach you.</div></div>
+            </div>
+            <div class="row-2">
+              <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required><div class="err">Please enter a valid email.</div></div>
+              <div class="field"><span class="label">Best way to reach you</span>
+                <div class="opt-group">
+                  <label class="opt"><input type="radio" name="contact" value="Text" checked><span>Text</span></label>
+                  <label class="opt"><input type="radio" name="contact" value="Call"><span>Call</span></label>
+                  <label class="opt"><input type="radio" name="contact" value="Email"><span>Email</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Event -->
+          <div class="card">
+            <div class="form-step-head"><span class="n">2</span><h2>Your celebration</h2></div>
+            <div class="row-2">
+              <div class="field"><label for="f-occasion">Occasion <span class="req">*</span></label>
+                <select id="f-occasion" name="occasion" required>
+                  <option value="">Choose one…</option>
+                  <option>Birthday</option><option>Wedding / Bridal Shower</option><option>Baby Shower / Gender Reveal</option>
+                  <option>Holiday</option><option>Graduation</option><option>Corporate / Client Gifts</option><option>Just Because</option><option>Other</option>
+                </select><div class="err">Pick the closest match.</div></div>
+              <div class="field"><label for="f-date">Date needed <span class="req">*</span></label><input id="f-date" name="date" type="date" required><div class="err">Please choose a date.</div></div>
+            </div>
+            <div class="rush-warn" id="rush-warn">That's a quick turnaround! Orders needed within the rush window include a rush fee, and Geri will confirm availability.</div>
+            <div class="field" style="margin-top:14px"><span class="label">Pickup or delivery?</span>
+              <div class="opt-group">
+                <label class="opt"><input type="radio" name="getting" value="Pickup" checked><span>Pickup (free)</span></label>
+                <label class="opt"><input type="radio" name="getting" value="Delivery"><span>Local delivery</span></label>
+              </div>
+            </div>
+            <div class="field" id="addr-field" hidden><label for="f-address">Delivery address <span class="req">*</span></label><input id="f-address" name="address" type="text" autocomplete="street-address"><div class="err">Where should we deliver?</div></div>
+          </div>
+
+          <!-- 3. Cookies -->
+          <div class="card">
+            <div class="form-step-head"><span class="n">3</span><h2>Your cookies</h2></div>
+            <div class="field" id="f-tier-field"><span class="label">Style <span class="req">*</span></span><div class="opt-group" id="tier-opts"></div><div class="err">Please choose a cookie style.</div></div>
+            <div class="field" id="f-dozens-field"><span class="label">How many? <span class="req">*</span> <span class="hint">use the dozen buttons, <em>or</em> type an exact number of cookies</span></span>
+              <div class="qty-row">
+                <div class="qty-unit">
+                  <div class="qty"><button type="button" data-q="-1" aria-label="One dozen fewer">−</button><input id="f-dozens" type="number" min="0" max="50" step="1" value="0" inputmode="numeric" aria-label="Dozens"><button type="button" data-q="1" aria-label="One dozen more">+</button></div>
+                  <span class="qty-note">dozen</span>
+                </div>
+                <span class="qty-eq" aria-hidden="true">=</span>
+                <div class="qty-unit">
+                  <input id="f-cookies" name="cookies" class="cookie-count" type="number" min="0" max="600" step="1" value="" placeholder="0" inputmode="numeric" aria-label="Number of cookies">
+                  <span class="qty-note">cookies</span>
+                </div>
+              </div>
+              <p class="qty-hint" id="qty-hint" aria-live="polite"></p>
+              <div class="err" id="qty-err">Minimum order is 12 cookies (1 dozen).</div>
+            </div>
+
+            <div class="field" id="f-photos-field"><span class="label">Photos of your idea <span class="hint">optional · up to 6</span></span>
+              <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-describedby="photo-help">
+                <input type="file" id="f-photos" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" multiple hidden>
+                <div class="dz-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="38" height="29" rx="6"/><path d="M17 11l3-5h8l3 5"/><circle cx="24" cy="25" r="7.5"/><circle cx="36" cy="18" r="1.4" fill="currentColor"/></svg></div>
+                <p class="dz-title"><strong>Add photos</strong> — drag them here or <span class="dz-link">choose from your device</span></p>
+                <p class="dz-sub" id="photo-help">Invitations, logos, color swatches, shapes, cookies you love — anything that shows Geri your vision. JPG, PNG, WebP or GIF.</p>
+              </div>
+              <div class="photo-count" id="photo-count" aria-live="polite"></div>
+              <ul class="photo-list" id="photo-list" aria-live="polite"></ul>
+              <p class="photo-safety"><span aria-hidden="true">🔒</span> Each photo is checked to make sure it’s a real picture, then saved as a clean copy with hidden data and location info removed.</p>
+            </div>
+
+            <div class="field"><label for="f-theme">Theme, colors &amp; wording <span class="req">*</span></label>
+              <textarea id="f-theme" name="theme" required placeholder="e.g. Emma's 5th birthday — unicorns, pink & lavender, her name on 6 cookies"></textarea><div class="err">Tell us a little about the look you want.</div></div>
+          </div>
+
+          <!-- 4. Anything else -->
+          <div class="card">
+            <div class="form-step-head"><span class="n">4</span><h2>Anything else?</h2></div>
+            <div class="field"><label for="f-allergy">Allergies or dietary notes</label><input id="f-allergy" name="allergies" type="text" placeholder="Let us know so we can talk it through"></div>
+            <div class="field"><label for="f-inspo">Inspiration link <span class="hint">Pinterest, Instagram, invitation…</span></label><input id="f-inspo" name="inspiration" type="text" placeholder="Paste a link (optional)"></div>
+            <div class="row-2">
+              <div class="field"><label for="f-notes">Notes for Geri</label><textarea id="f-notes" name="notes" style="min-height:80px"></textarea></div>
+              <div class="field"><label for="f-heard">How did you hear about us?</label>
+                <select id="f-heard" name="heard"><option value="">—</option><option>Friend or family</option><option>Instagram</option><option>Facebook</option><option>Event or pop-up</option><option>Google</option><option>Other</option></select></div>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn btn-pink" type="submit" id="submit-btn" style="font-size:1.1rem">Send to Geri</button>
+            <span class="small" id="submit-note"></span>
+          </div>
+        </form>
+
+        <div class="card piped success" id="success" tabindex="-1">
+          <div class="cookie-wrap" id="success-art"></div>
+          <h2>Thank you! Your message is on its way.</h2>
+          <p id="success-msg">Geri will be in touch soon to talk through your cookies.</p>
+          <p><a class="btn" href="gallery.html">Browse the gallery</a></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cookie-art.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/photo-upload.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

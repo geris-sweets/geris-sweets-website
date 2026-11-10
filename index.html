@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geri's Sweets · Custom Decorated Cookies</title>
+  <meta name="description" content="Hand-decorated custom sugar cookies for birthdays, weddings, baby showers, holidays and corporate gifts. Order from Geri's Sweets.">
+  <meta property="og:title" content="Geri's Sweets · Custom Decorated Cookies">
+  <meta property="og:description" content="Hand-decorated custom cookies for every celebration.">
+  <meta property="og:image" content="images/logo.png">
+  <meta name="theme-color" content="#D8BA8B">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <canvas class="sprinkle-canvas" data-count="80" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Custom Decorated Cookies</span>
+          <h1>Little works of art<br>you can <span class="accent">eat.<svg class="piped-underline" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 Q 30 2 55 11 T 105 11 T 155 10 T 196 8"/></svg></span></h1>
+          <p class="hero-lead">Every cookie is baked from scratch and decorated by hand with royal icing — designed around your colors, your theme and your big day.</p>
+          <div class="btn-row">
+            <a class="btn btn-pink" href="contact.html">Contact Geri <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="gallery.html">See the gallery</a>
+          </div>
+          <div class="hero-note"><span class="hand">Psst… have a picture of your idea? Add it to your order!</span></div>
+        </div>
+        <div class="hero-stage" aria-hidden="true">
+          <div class="orbit" id="hero-orbit"></div>
+          <div class="hero-logo"><img src="images/logo.png" alt="" width="480" height="480"></div>
+        </div>
+      </div>
+      <div class="scallop scallop-bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- OCCASIONS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Made for your moments</span>
+          <h2 class="ribbon">Something sweet for every occasion</h2>
+          <p>From first birthdays to fiftieth anniversaries, each set is designed just for you.</p>
+        </div>
+        <div class="grid grid-3" id="occasions"></div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: newest gallery photos (set by date in js/data.js) -->
+    <section class="section showcase">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Just out of the oven</span>
+          <h2 class="ribbon">Fresh from Geri's kitchen</h2>
+          <p>The latest cookies to leave Geri's kitchen. Tap any photo for a closer look.</p>
+        </div>
+        <div class="showcase-track" id="showcase"></div>
+        <div class="showcase-cta reveal" id="showcase-cta"></div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section story">
+      <div class="wrap story-grid">
+        <div class="reveal">
+          <div class="recipe-card">
+            <h3>Geri's recipe for joy</h3>
+            <ul>
+              <li>1 buttery sugar cookie, baked fresh</li>
+              <li>A cloud of royal icing</li>
+              <li>Your favorite colors</li>
+              <li>A steady hand &amp; lots of patience</li>
+              <li>A generous pinch of love</li>
+            </ul>
+          </div>
+        </div>
+        <div class="story-copy reveal">
+          <span class="eyebrow">From Geri's kitchen</span>
+          <h2>Hi, I'm Geri!</h2>
+          <!-- EDIT ME: write Geri's story in her own words -->
+          <p>What started as decorating cookies for family celebrations grew into a little business that's all about making people smile. Every set begins as a conversation about your event — the colors, the theme, the people you're celebrating.</p>
+          <p>Then comes the fun part: baking, mixing colors and piping each cookie by hand, one layer of icing at a time, until it looks like it belongs in a bakery window.</p>
+          <span class="signature">xo, Geri</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="ribbon">From idea to cookie</h2>
+        </div>
+        <div class="steps" id="steps"></div>
+        <p class="center reveal" style="margin-top:40px"><a class="btn" href="pricing.html">See pricing</a></p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <canvas class="sprinkle-canvas" data-count="50" aria-hidden="true"></canvas>
+      <div class="wrap reveal">
+        <h2>Let's make something sweet</h2>
+        <p>Holidays and wedding season fill up fast. Tell us your date and we'll save you a spot.</p>
+        <a class="btn" href="contact.html">Contact Geri</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cookie-art.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery · Geri's Sweets</title>
+  <meta name="description" content="Browse custom decorated cookies by Geri's Sweets — birthdays, weddings, baby showers, holidays and more.">
+  <meta name="theme-color" content="#D8BA8B">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery">
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero" data-flowers="8">
+      <div class="wrap">
+        <span class="eyebrow">Fresh from the piping bag</span>
+        <h1 class="ribbon">Gallery</h1>
+        <p>A peek at past sets. Every order is one of a kind — use these for inspiration!</p>
+      </div>
+      <div class="scallop scallop-bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" style="padding-top:50px">
+      <div class="wrap">
+        <div class="filters" id="filters" role="toolbar" aria-label="Filter gallery"></div>
+        <div class="gallery-grid" id="gallery"></div>
+        <div class="photo-tip reveal">
+          <p class="pill-note">Love something you see? Mention it when you contact Geri and she’ll make it yours.</p>
+          <p style="margin-top:22px"><a class="btn btn-pink" href="contact.html">Contact Geri</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Cookie photo">
+    <div class="lb-inner">
+      <button class="lb-close" type="button" aria-label="Close">×</button>
+      <button class="lb-nav lb-prev" type="button" aria-label="Previous">‹</button>
+      <button class="lb-nav lb-next" type="button" aria-label="Next">›</button>
+      <div class="lb-media"></div>
+      <h3 class="lb-title"></h3>
+      <p class="lb-cat small"></p>
+    </div>
+  </div>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cookie-art.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

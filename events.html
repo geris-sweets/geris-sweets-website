@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events · Geri's Sweets</title>
+  <meta name="description" content="Pop-ups, holiday order deadlines and cookie parties from Geri's Sweets.">
+  <meta name="theme-color" content="#D8BA8B">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero" data-flowers="8">
+      <div class="wrap">
+        <span class="eyebrow">Mark your calendar</span>
+        <h1 class="ribbon">Events</h1>
+        <p>Pop-up sales, holiday deadlines — and how to bring the cookie fun to your own party.</p>
+      </div>
+      <div class="scallop scallop-bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="card piped next-up reveal" id="next-up"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Coming up</span>
+          <h2 class="ribbon">Upcoming dates</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="section bg-kraft">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Book Geri</span>
+          <h2 class="ribbon">Bring the cookies to your event</h2>
+          <p>Planning something special? Geri can make it sweeter.</p>
+        </div>
+        <div class="grid grid-2 services-2" id="services"></div>
+        <p class="center reveal" style="margin-top:40px"><a class="btn btn-pink" href="contact.html">Ask about your date</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">A year of cookies</span>
+          <h2 class="ribbon">The cookie calendar</h2>
+          <p>Plan ahead! Here's what's on the cookie table each month.</p>
+        </div>
+        <div class="cal-strip" id="calendar"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cookie-art.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>
