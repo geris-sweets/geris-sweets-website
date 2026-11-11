@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Filters
   var cats = [];
   items.forEach(function (it) { if (cats.indexOf(it.category) < 0) cats.push(it.category); });
-  var ORDER = ['Birthday', 'Baby Shower', 'Wedding', 'Graduation', 'Religious', 'Back to School', 'Occupation', 'Sports', 'Gifts'];
+  var ORDER = ['Birthday', 'Baby Shower', 'Wedding', 'Graduation', 'Religious', 'Holidays', 'Back to School', 'Corporate', 'Occupation', 'Sports', 'Gifts'];
   cats.sort(function (a, b) { var x = ORDER.indexOf(a), y = ORDER.indexOf(b); return (x < 0 ? 99 : x) - (y < 0 ? 99 : y); });
   var count = function (c) { return items.filter(function (it) { return c === 'All' || it.category === c; }).length; };
   filters.innerHTML = ['All'].concat(cats).map(function (c, i) {
